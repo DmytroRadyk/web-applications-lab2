@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="uk"><head>
+  <title>Мініблог · Лабораторна 2</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <%= csrf_meta_tags %><%= csp_meta_tag %><%= stylesheet_link_tag "application" %>
+</head><body>
+<header><nav class="wrap"><%= link_to "Мініблог", root_path, class: "brand" %><div><%= link_to "Користувачі", users_path %><%= link_to "Дописи", microposts_path %><%= link_to "Hello", hello_path %><%= link_to "Goodbye", goodbye_path %></div></nav></header>
+<main class="wrap"><%= yield %></main>
+<footer class="wrap">Ruby on Rails · Користувачі та їхні історії</footer>
+</body></html>

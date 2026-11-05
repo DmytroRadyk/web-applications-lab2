@@ -1,0 +1,2 @@
+<p class="notice"><%= notice %></p><h1>Люди мініблогу</h1><p class="muted">Знайомся з авторами та читай їхні короткі історії.</p><%= link_to "Додати користувача", new_user_path, class: "button" %>
+<div id="users"><% @users.each do |user| %><%= render user %><%= link_to "Переглянути профіль", user %><% end %><% if @users.empty? %><p class="panel">Поки немає користувачів. Додай першого автора.</p><% end %></div>

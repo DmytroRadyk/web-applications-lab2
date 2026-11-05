@@ -1,0 +1,2 @@
+<%= form_with(model: micropost) do |form| %><% if micropost.errors.any? %><div class="errors" role="alert"><ul><% micropost.errors.full_messages.each do |message| %><li><%= message %></li><% end %></ul></div><% end %>
+<%= form.label :content, "Текст допису" %><%= form.text_area :content, required: true, maxlength: 140 %><p class="muted">Максимум 140 символів.</p><%= form.label :user_id, "Автор" %><%= form.collection_select :user_id, User.order(:name), :id, :name, { prompt: "Обери автора" }, { required: true } %><div><%= form.submit "Зберегти" %></div><% end %>

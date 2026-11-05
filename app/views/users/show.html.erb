@@ -1,0 +1,1 @@
+<p class="notice"><%= notice %></p><%= render @user %><div class="actions"><%= link_to "Редагувати", edit_user_path(@user) %><%= link_to "До користувачів", users_path %><%= button_to "Видалити користувача", @user, method: :delete %></div><h2>Дописи автора</h2><% @user.microposts.order(created_at: :desc).each do |post| %><%= render post %><% end %>

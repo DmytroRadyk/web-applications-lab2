@@ -1,0 +1,1 @@
+<p class="notice"><%= notice %></p><h1>Короткі історії</h1><p class="muted">Одна думка — до 140 символів.</p><%= link_to "Написати допис", new_micropost_path, class: "button" %><div id="microposts"><% @microposts.each do |post| %><%= render post %><% end %><% if @microposts.empty? %><p class="panel">Поки немає дописів. Напиши першу історію.</p><% end %></div>
